@@ -9,4 +9,12 @@
 body {
   font-family: 'Work Sans', sans-serif;
   line-height: 1.5;
+  color: #fff;
+  background: #0b0e18;
+}
+
+/* General Styles */
+
+a {
+  text-decoration: none;
 }

@@ -1,19 +1,26 @@
 import App from 'next/app';
 import '../styles/global.css';
 import { ThemeProvider } from 'styled-components';
+import { AnimatePresence } from 'framer-motion';
 
 const theme = {
   colors: {
-    primary: '#0070f3',
+    primary: 'hsl(216, 100%, 69%)',
   },
+  padding: {
+    sections: '2rem',
+  },
+  borderRadius: '0.3rem',
 };
 
 export default class MyApp extends App {
   render() {
-    const { Component, pageProps } = this.props;
+    const { Component, pageProps, router } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <AnimatePresence exitBeforeEnter>
+          <Component {...pageProps} key={router.route} />
+        </AnimatePresence>
       </ThemeProvider>
     );
   }
