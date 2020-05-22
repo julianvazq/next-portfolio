@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import ContainerMaxWidth from '../utils/ContainerMaxWidth';
 import ContainerFluid from '../utils/ContainerFluid';
+import Link from 'next/link';
 
 const Nav = styled.nav`
   display: flex;
@@ -33,16 +34,19 @@ const Nav = styled.nav`
 
 const Navbar = () => {
   return (
-    // <ContainerFluid background='red'>
     <ContainerMaxWidth>
       <Nav>
         <img src='/logo/jv_logo.png' />
         <ul>
           <li>
-            <a>Projects</a>
+            <Link href='/'>
+              <a>Home</a>
+            </Link>
           </li>
           <li>
-            <a>Contact</a>
+            <Link href='#footer'>
+              <a>Contact</a>
+            </Link>
           </li>
           <li>
             <a>Resume</a>
@@ -50,7 +54,6 @@ const Navbar = () => {
         </ul>
       </Nav>
     </ContainerMaxWidth>
-    // </ContainerFluid>
   );
 };
 

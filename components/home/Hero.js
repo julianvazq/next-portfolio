@@ -39,7 +39,12 @@ const VideoContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 2, 108, 0.3);
+    background: linear-gradient(
+      180deg,
+      rgba(0, 2, 108, 0.3) 0%,
+      rgba(0, 2, 108, 0.3) 60%,
+      rgba(11, 14, 24, 1) 100%
+    );
   }
 `;
 
