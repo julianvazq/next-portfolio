@@ -34,7 +34,7 @@ const Nav = styled.nav`
 
 const Navbar = () => {
   return (
-    <ContainerMaxWidth>
+    <ContainerMaxWidth nav>
       <Nav>
         <img src='/logo/jv_logo.png' />
         <ul>

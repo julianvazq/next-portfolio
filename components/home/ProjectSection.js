@@ -3,7 +3,6 @@ import styled, { keyframes } from 'styled-components';
 import { IoIosArrowDown } from 'react-icons/io';
 import ContainerFluid from '../utils/ContainerFluid';
 import Project from './Project';
-import useViewportWidth from '../../hooks/useViewportWidth';
 
 const bounce = keyframes`
     0% { transform: translateY(0); }
@@ -14,7 +13,7 @@ const IconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  margin-bottom: 4rem;
 `;
 const ArrowIcon = styled(IoIosArrowDown)`
   font-size: 4rem;
@@ -35,7 +34,7 @@ const Grid = styled.div`
 
 const Projects = () => {
   return (
-    <ContainerFluid padding='0 0 5rem 0'>
+    <ContainerFluid>
       <IconContainer>
         <ArrowIcon />
       </IconContainer>

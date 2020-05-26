@@ -10,7 +10,6 @@ const StyledFooter = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 0;
 `;
 
 const FooterText = styled.p`

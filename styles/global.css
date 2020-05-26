@@ -14,11 +14,12 @@ body {
   font-family: 'Work Sans', sans-serif;
   line-height: 1.5;
   color: #fff;
-  background: #0b0e18;
+  background: #121c3a;
 }
 
 /* General Styles */
 
 a {
   text-decoration: none;
+  color: #fff;
 }
