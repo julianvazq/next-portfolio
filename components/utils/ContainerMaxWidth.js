@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  max-width: ${(props) => (props.nav ? '1500px' : '900px')};
+  max-width: ${(props) => (props.nav ? '1500px' : '1100px')};
   width: 90%;
   margin: auto;
   background: ${(props) => props.background && props.background};

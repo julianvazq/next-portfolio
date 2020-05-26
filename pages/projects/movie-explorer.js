@@ -9,6 +9,8 @@ import {
   Img,
   Video,
   HeaderContainer,
+  PrimaryButton,
+  SecondaryButton,
 } from '../../styles/shared-styles';
 import styled from 'styled-components';
 
@@ -23,6 +25,7 @@ const Subtitle = styled.h2`
 
 const Description = styled.p`
   font-size: 1.25rem;
+  margin-bottom: 2rem;
 `;
 
 const Navigation = styled.h2`
@@ -36,6 +39,20 @@ const NavigationLink = styled.p`
 
 const VideoDescription = styled.p`
   font-size: 1.25rem;
+`;
+
+const ButtonContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-items: space-between;
+
+  a {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+  }
 `;
 
 const MovieExplorerPage = () => {
@@ -65,12 +82,16 @@ const MovieExplorerPage = () => {
         </picture>
         <ContainerFluid>
           <ContainerMaxWidth>
+            <Title>Movie Explorer</Title>
             <HeaderContainer>
               <div>
-                <Title>Movie Explorer</Title>
                 <Description>
                   Discover thousands of movies and add them to your watchlist.
                 </Description>
+                <ButtonContainer>
+                  <PrimaryButton>Visit site</PrimaryButton>
+                  <SecondaryButton>View code</SecondaryButton>
+                </ButtonContainer>
               </div>
               <div>
                 <Navigation>Content</Navigation>
@@ -108,6 +129,9 @@ const MovieExplorerPage = () => {
               type='video/mp4'
             />
           </Video>
+        </ContainerFluid>
+        <ContainerFluid>
+          <ContainerMaxWidth></ContainerMaxWidth>
         </ContainerFluid>
       </motion.div>
     </>
