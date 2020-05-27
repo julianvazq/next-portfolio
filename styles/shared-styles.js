@@ -36,14 +36,15 @@ export const CoverImg = styled.img`
 
 export const Img = styled.img`
   display: block;
-  width: 100%;
+  width: 90%;
   max-width: 1400px;
+  /* max-height: 700px; */
+  margin: auto;
 `;
 
 export const Video = styled.video`
   margin: 1rem auto;
   display: block;
-  width: 80%;
   max-height: 700px;
 
   @media (max-width: 1100px) {

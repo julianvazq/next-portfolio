@@ -18,7 +18,7 @@ const Title = styled.h1`
   font-size: 2.25rem;
 `;
 
-const Subtitle = styled.h2`
+const SubHeading = styled.h2`
   font-size: 2rem;
   margin-bottom: 1rem;
 `;
@@ -80,6 +80,7 @@ const MovieExplorerPage = () => {
             alt={'Movie Explorer'}
           />
         </picture>
+        {/* <ContainerFluid background='url(/images/space.jpg)'> */}
         <ContainerFluid>
           <ContainerMaxWidth>
             <Title>Movie Explorer</Title>
@@ -96,9 +97,8 @@ const MovieExplorerPage = () => {
               <div>
                 <Navigation>Content</Navigation>
                 <NavigationLink>
-                  <Link href='/'>
-                    <a>Home Page</a>
-                  </Link>
+                  {' '}
+                  <a href='#preview'>Preview</a>
                 </NavigationLink>
                 <NavigationLink>
                   {' '}
@@ -114,7 +114,7 @@ const MovieExplorerPage = () => {
         </ContainerFluid>
         <ContainerFluid background='hsl(227,42%,23%)'>
           <ContainerMaxWidth>
-            <Subtitle>Preview</Subtitle>
+            <SubHeading id='preview'>Preview</SubHeading>
             <VideoDescription>Browse similar movies</VideoDescription>
           </ContainerMaxWidth>
           <Video autoPlay loop muted playsInline>
@@ -130,9 +130,24 @@ const MovieExplorerPage = () => {
             />
           </Video>
         </ContainerFluid>
-        <ContainerFluid>
-          <ContainerMaxWidth></ContainerMaxWidth>
+        <ContainerFluid background='hsl(227,42%,23%)'>
+          <ContainerMaxWidth>
+            <SubHeading id='responsive'>Responsive Design</SubHeading>
+          </ContainerMaxWidth>
+          <Img
+            srcSet={'/images/movie-explorer-responsive.png'}
+            alt={'Movie Explorer'}
+          />
         </ContainerFluid>
+        <ContainerFluid
+          tech
+          // background='linear-gradient( hsla(225, 53%, 15%, 0.7), hsla(225, 53%, 15%,0.7)), url(/cubes-cropped.jpg);'
+        >
+          <ContainerMaxWidth>
+            <SubHeading id='tech'>Tech Stack</SubHeading>
+          </ContainerMaxWidth>
+        </ContainerFluid>
+        {/* </ContainerFluid> */}
       </motion.div>
     </>
   );
